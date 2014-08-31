@@ -46,6 +46,6 @@ describe Takeaway do
 		expect(takeaway.total).to eq 11
 	end
 
-	#cd projects/challenges/week_4_challenge/takeaway
+	
 
 end

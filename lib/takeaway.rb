@@ -48,4 +48,8 @@ class Takeaway
 		order.inject(:+)
 	end
 
+	# def
+
+	# end
+
 end
