@@ -14,7 +14,6 @@ class Takeaway
 	def ring_ring
 		puts "How can I help you? Choose 1 to see the menu, 2 to add items to your order or 3 to pay."
 		loop do
-			# how_can_i_help_you
 			options
 		end
 	end

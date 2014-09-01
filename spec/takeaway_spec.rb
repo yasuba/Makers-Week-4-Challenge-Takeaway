@@ -52,7 +52,7 @@ describe Takeaway do
 	end
 
 		it 'should take payment' do
-			allow(takeaway).to receive(:gets).and_return('3')
+			allow(takeaway).to receive(:gets).and_return("3")
 			expect(takeaway).to receive(:pay)
 			takeaway.options
 		end
