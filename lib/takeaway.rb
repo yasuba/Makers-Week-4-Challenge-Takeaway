@@ -20,7 +20,6 @@ class Takeaway
 
 	def options
 		p "Choose 2 to add items to your order or 3 to pay."
-		# p "To order another item, press 2, to pay, press 3." 	 
 		answer = gets.chomp
 		case answer
 		when "1"
