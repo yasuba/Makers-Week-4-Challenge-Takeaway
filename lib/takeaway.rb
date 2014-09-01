@@ -38,11 +38,8 @@ class Takeaway
 	def what_do_you_want
 		place_order = gets.chomp
 		order_to_sym = place_order.gsub(" ", "_").to_sym
-		if menu.include?(order_to_sym) 
-			@order << order_to_sym
-		else
-			p "We don't serve that here. Please try again." if !menu.include?(order_to_sym)
-		end
+		@order << order_to_sym if menu.include?(order_to_sym) 
+		p "We don't serve that here. Please try again." if !menu.include?(order_to_sym)
 		all_dishes
 	end
 
@@ -57,10 +54,7 @@ class Takeaway
 	end
 
 	def total
-		new_order = order.map do |v|
-			x = v.to_s.gsub(" ", "_").to_sym
-			menu[x]
-		end
+		new_order = order.map {|v| x = v.to_s.gsub(" ", "_").to_sym ; menu[x] }
 		new_order.inject(:+)
 	end
 
