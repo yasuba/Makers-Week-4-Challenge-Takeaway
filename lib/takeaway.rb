@@ -57,10 +57,10 @@ class Takeaway
 	end
 
 	def send_message
-		@account_sid = 'AC160c8dbb0270a8f82d8a15f74a00d365'
-		@auth_token = '921e633e79f2b741919176a029d33a1f'
+		@account_sid = ''
+		@auth_token = ''
 		@client = Twilio::REST::Client.new(@account_sid, @auth_token)
-		@client.messages.create(:from => '+441556730136', :to => '07817384762', :body => 'Thank you! Your order was placed and will be delivered within one hour.')
+		@client.messages.create(:from => '1234567890', :to => '1234567890', :body => 'Thank you! Your order was placed and will be delivered within one hour.')
 	end
 
 end
