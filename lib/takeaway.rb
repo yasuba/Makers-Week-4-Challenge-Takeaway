@@ -8,7 +8,7 @@ class Takeaway
 	end
 
 	def menu
-		{:green_curry => 5, :red_curry => 6}
+		{:green_curry => 5, :red_curry => 6, :jasmine_rice => 4, :prawn_crackers => 2}
 	end
 
 	def ring_ring
@@ -37,7 +37,7 @@ class Takeaway
 		place_order = gets.chomp
 		order_to_sym = place_order.gsub(" ", "_").to_sym
 		@order << order_to_sym if menu.include?(order_to_sym) 
-		p "We don't serve that here. Please try again." if !menu.include?(order_to_sym)
+		p "We don't serve that here. Please try again." unless menu.include?(order_to_sym)
 		all_dishes
 	end
 

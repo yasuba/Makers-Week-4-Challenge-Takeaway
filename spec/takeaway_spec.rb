@@ -9,13 +9,13 @@ describe Takeaway do
 	let(:takeaway) {Takeaway.new}
 
 	it 'should have a menu of dishes with prices' do
-		expect(takeaway.menu).to eq({:green_curry => 5, :red_curry => 6})
+		expect(takeaway.menu).to eq({:green_curry => 5, :red_curry => 6, :jasmine_rice => 4, :prawn_crackers => 2})
 	end
 
 	it "prints out the menu when prompted" do
 		allow(takeaway).to receive(:gets).and_return("1")
 		takeaway.options
-		expect(takeaway.options).to eq({:green_curry => 5, :red_curry => 6})
+		expect(takeaway.options).to eq({:green_curry => 5, :red_curry => 6, :jasmine_rice => 4, :prawn_crackers => 2})
 	end
 
 	it 'should be able to take an order' do
